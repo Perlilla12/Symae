@@ -1,0 +1,47 @@
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Configuración de entorno
+.env
+.env.*
+
+# Dependencias de Composer (PHP)
+vendor/
+
+# Dependencias de Node.js (si usas npm o yarn)
+node_modules/
+
+# Archivos de logs
+*.log
+logs/
+storage/logs/
+
+# Archivos temporales y de caché
+*.cache
+*.tmp
+*.temp
+.cache/
+tmp/
+temp/
+
+# Configuraciones del editor/IDE
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Archivos de respaldo y otros
+*.bak
+*.swp
+*~
+
+# Archivos generados por herramientas de frontend (ej: build, dist)
+dist/
+build/
+
+# Archivos de PHPUnit u otros test tools
+.phpunit.result.cache
+
+# Archivos de Git conflict (por si se genera alguno durante un merge)
+*.orig
