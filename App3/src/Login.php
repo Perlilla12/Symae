@@ -6,7 +6,7 @@
     <title>Telemas Admin | Login </title>
     <meta name="description" content="Login Page" />
 
-    <script src="../js/main.js"></script>
+    <script src="..js/main.js"></script>
 
     <!-- Favicon Tags Start -->
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="img/favicon/apple-touch-icon-57x57.png" />

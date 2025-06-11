@@ -53,11 +53,13 @@
                 <!-- Top Buttons Start -->
                 <div class="col-12 col-md-5 d-flex align-items-start justify-content-end">
                   <!-- Add New Button Start -->
-                  <button type="button"
-                    class="btn btn-outline-primary btn-icon btn-icon-start w-100 w-md-auto add-datatable">
-                    <i data-acorn-icon="plus"></i>
-                    <span> Nuevo </span>
-                  </button>
+                  <!-- Reemplaza tu botón actual con este -->
+                    <button type="button" 
+                            class="btn btn-outline-primary btn-icon btn-icon-start w-100 w-md-auto add-datatable"
+                            onclick="window.location.href='add-client.php'">
+                      <i data-acorn-icon="plus"></i>
+                      <span> Nuevo </span>
+                    </button>
                   <!-- Add New Button End -->
                 </div>
                 <!-- Top Buttons End -->

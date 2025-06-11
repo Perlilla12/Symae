@@ -3267,9 +3267,9 @@ img {
 }
 
 .fixed-background {
-  background: url("../img/background/background-blue.webp") no-repeat center center fixed;
-  background-size: cover;
-  width: 100%;
+  background: url("../img/background/7.png") no-repeat center center fixed;
+  background-size: 100%;
+  width: 110%;
   height: 100%;
   position: fixed;
   top: 0;
