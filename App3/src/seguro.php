@@ -15,5 +15,3 @@ if (!$_SESSION["userlog"]) {
 
 
 ?> 
-
-

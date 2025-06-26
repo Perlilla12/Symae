@@ -242,6 +242,7 @@
 
 
     <script>
+<<<<<<< HEAD
       // Funciones de redirección corregidas
       function redirectToCustomers() {
         window.location.href = 'Customers.php'; 
@@ -259,6 +260,22 @@
       $(document).ready(function() {
         ShowStats();
       });
+=======
+      // Funciones de redirección
+      function redirectToClientes() {
+        window.location.href = 'Customers.php'; 
+
+      function redirectToSitios() {
+        window.location.href = 'Sites.php';
+
+      function redirectToEquipos() {
+        window.location.href = 'Devices.php'; 
+      }
+
+        $( document ).ready(function() {
+           ShowStats();
+       });
+>>>>>>> 9af527b3444cc1e14659dcc80e76db5aa9ba7e72
      </script>
 
   </body>

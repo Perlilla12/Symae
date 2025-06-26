@@ -47,7 +47,11 @@
                     <i data-acorn-icon="arrow-left"></i>
                     <span>CANCELAR</span>
                   </button>
+<<<<<<< HEAD
                   <button type="button" class="btn btn-secondary btn-icon btn-icon-start me-2" onclick="saveClient();">
+=======
+                  <button type="button" class="btn btn-secondary btn-icon btn-icon-start me-2" onclick="saveClient()">
+>>>>>>> 9af527b3444cc1e14659dcc80e76db5aa9ba7e72
                     <i data-acorn-icon="save"></i>
                     <span>GUARDAR</span>
                   </button>
@@ -95,6 +99,7 @@
                           </div>
                         </div>
 
+<<<<<<< HEAD
                         <!-- Campo de nota desplegable modificado -->
                         <div class="mb-3">
                           <a href="#" id="linkAddNote" class="text-primary" style="text-decoration: none;">
@@ -114,6 +119,11 @@
                               </button>
                             </div>
                           </div>
+=======
+                       
+                        <div class="mb-3">
+                          <a href="#" class="text-primary" style="text-decoration: none;">Añadir etiqueta, nota</a>
+>>>>>>> 9af527b3444cc1e14659dcc80e76db5aa9ba7e72
                         </div>
 
                         <div class="mb-3">
@@ -143,6 +153,7 @@
                                  placeholder="Teléfono" required>
                         </div>
 
+<<<<<<< HEAD
                         <!-- SECCIÓN MODIFICADA: Más detalles con fecha de registro -->
                         <div class="mb-3">
                           <div class="d-flex justify-content-between align-items-center flex-wrap">
@@ -155,6 +166,10 @@
                               </small>
                             </div>
                           </div>
+=======
+                        <div class="mb-3">
+                          <a href="#" class="text-primary" style="text-decoration: none;">Más detalles...</a>
+>>>>>>> 9af527b3444cc1e14659dcc80e76db5aa9ba7e72
                         </div>
                       </div>
                     </div>
@@ -192,6 +207,16 @@
                                    placeholder="Código postal">
                           </div>
                         </div>
+<<<<<<< HEAD
+=======
+
+                        <div class="mb-3">
+                          <label class="form-label">Calle 2</label>
+                          <input type="text" id="txtCalle2" name="txtCalle2" class="form-control" 
+                                 placeholder="Calle 2">
+                        </div>
+
+>>>>>>> 9af527b3444cc1e14659dcc80e76db5aa9ba7e72
                         <div class="mb-3">
                           <label class="form-label">Nacionalidad</label>
                           <select id="selectNacionalidad" name="selectNacionalidad" class="form-control">
@@ -260,6 +285,7 @@
       defer
     ></script>
 
+<<<<<<< HEAD
   <style>
     .fecha-registro-container {
       background-color: #f8f9fa;
@@ -306,6 +332,14 @@
     // Inicializar mapa de Google
     function initMap() {
       // Coordenadas por defecto (Ciudad de Tulancingo)
+=======
+  <script>
+    let map, marker;
+
+    // Inicializar mapa de Google
+    function initMap() {
+      // Coordenadas por defecto (Ciudad de México)
+>>>>>>> 9af527b3444cc1e14659dcc80e76db5aa9ba7e72
       const defaultLocation = { lat: 20.0832, lng: -98.3689 };
       
       map = new google.maps.Map(document.getElementById("map"), {
@@ -369,14 +403,18 @@
     }
 
     $(document).ready(function() {
+<<<<<<< HEAD
       // NUEVO: Establecer la fecha de registro al cargar la página
       establecerFechaRegistro();
 
+=======
+>>>>>>> 9af527b3444cc1e14659dcc80e76db5aa9ba7e72
       // Inicializar Select2
       $('#selectNacionalidad').select2({
         placeholder: 'Seleccione nacionalidad'
       });
 
+<<<<<<< HEAD
       // Evento para mostrar/ocultar el campo de nota
       $('#linkAddNote').click(function(e) {
         e.preventDefault();
@@ -390,6 +428,8 @@
         }
       });
 
+=======
+>>>>>>> 9af527b3444cc1e14659dcc80e76db5aa9ba7e72
       // Cuando se cambien las coordenadas manualmente, actualizar mapa
       $('#txtLatitud, #txtLongitud').on('change', function() {
         const lat = parseFloat($('#txtLatitud').val());
@@ -403,6 +443,7 @@
       });
     });
 
+<<<<<<< HEAD
     // Función para eliminar la nota
     function removeNote() {
       $('#txtNota').val('');
@@ -410,11 +451,14 @@
       $('#linkAddNote').html('<i data-acorn-icon="plus" class="me-1"></i>Añadir etiqueta, nota');
     }
 
+=======
+>>>>>>> 9af527b3444cc1e14659dcc80e76db5aa9ba7e72
     function saveClient() {
       if (!validateForm()) {
         return;
       }
 
+<<<<<<< HEAD
       // Mostrar spinner de carga
       $('#spinner-div').show();
 
@@ -477,6 +521,69 @@
 
       // Redirigir a la página de perfil del cliente
       window.location.href = `client.php?${params.toString()}`;
+=======
+      $.confirm({
+        title: 'Guardar Cliente',
+        content: '¿Está seguro de guardar este cliente?',
+        buttons: {
+          confirm: {
+            text: 'Guardar',
+            btnClass: 'btn-success',
+            action: function() {
+              $.alert({
+                title: 'Éxito',
+                content: 'Cliente guardado exitosamente',
+                type: 'green',
+                buttons: {
+                  ok: function() {
+                    $('#formAddClient')[0].reset();
+                    $('#selectNacionalidad').val('').trigger('change');
+                  }
+                }
+              });
+            }
+          },
+          cancel: {
+            text: 'Cancelar',
+            btnClass: 'btn-secondary'
+          }
+        }
+      });
+    }
+
+    function saveAndSendClient() {
+      if (!validateForm()) {
+        return;
+      }
+
+      $.confirm({
+        title: 'Enviar y Guardar Cliente',
+        content: '¿Está seguro de enviar y guardar este cliente?',
+        buttons: {
+          confirm: {
+            text: 'Enviar y Guardar',
+            btnClass: 'btn-primary',
+            action: function() {
+              $.alert({
+                title: 'Éxito',
+                content: 'Cliente enviado y guardado exitosamente',
+                type: 'green',
+                buttons: {
+                  ok: function() {
+                    $('#formAddClient')[0].reset();
+                    $('#selectNacionalidad').val('').trigger('change');
+                  }
+                }
+              });
+            }
+          },
+          cancel: {
+            text: 'Cancelar',
+            btnClass: 'btn-secondary'
+          }
+        }
+      });
+>>>>>>> 9af527b3444cc1e14659dcc80e76db5aa9ba7e72
     }
 
     function validateForm() {
@@ -491,12 +598,15 @@
         isValid = false;
       }
 
+<<<<<<< HEAD
       if (!$('#txtApellido').val().trim()) {
         errors.push('El apellido es requerido');
         $('#txtApellido').addClass('is-invalid');
         isValid = false;
       }
 
+=======
+>>>>>>> 9af527b3444cc1e14659dcc80e76db5aa9ba7e72
       if (!$('#txtTelefono').val().trim()) {
         errors.push('El teléfono es requerido');
         $('#txtTelefono').addClass('is-invalid');
@@ -512,7 +622,11 @@
       if (!isValid) {
         $.alert({
           title: 'Campos Requeridos',
+<<<<<<< HEAD
           content: 'Por favor complete los siguientes campos:<br>• ' + errors.join('<br>• '),
+=======
+          content: 'Por favor complete los siguientes campos:\n• ' + errors.join('\n• '),
+>>>>>>> 9af527b3444cc1e14659dcc80e76db5aa9ba7e72
           type: 'red'
         });
       }
@@ -520,8 +634,12 @@
       return isValid;
     }
 
+<<<<<<< HEAD
     // Remover estilos de error cuando el usuario empiece a escribir
     $('#txtNombre, #txtApellido, #txtTelefono, #txtDireccion').on('input', function() {
+=======
+    $('#txtNombre, #txtTelefono, #txtDireccion').on('input', function() {
+>>>>>>> 9af527b3444cc1e14659dcc80e76db5aa9ba7e72
       $(this).removeClass('is-invalid');
     });
   </script>
