@@ -1,4 +1,3 @@
-
 <?php include ("seguro.php"); ?>
 
 <!DOCTYPE html>
@@ -83,12 +82,12 @@
                 <div class="row g-2">
 
                   <div class="col-6 col-md-4 col-lg-2">
-                    <div class="card h-100 hover-scale-up cursor-pointer">
+                    <div class="card h-100 hover-scale-up cursor-pointer" onclick="redirectToCustomers()">
                       <div class="card-body d-flex flex-column align-items-center">
                         <div class="sw-6 sh-6 rounded-xl d-flex justify-content-center align-items-center border border-primary mb-4">
                           <i data-acorn-icon="antenna" class="text-primary"></i>
                         </div>
-                        <div class="mb-1 d-flex align-items-center text-alternate text-small lh-1-25">CLIENTES a</div>
+                        <div class="mb-1 d-flex align-items-center text-alternate text-small lh-1-25">CLIENTES</div>
                         <div class="text-primary cta-4"><div id="activeClients"></div></div>
                         <br>
                         <div class="mb-1 d-flex align-items-center text-alternate text-small lh-1-25">SUSPENDIDOS</div>
@@ -131,7 +130,7 @@
                 <div class="row g-2">
 
                   <div class="col-6 col-md-4 col-lg-2">
-                    <div class="card h-100 hover-scale-up cursor-pointer">
+                    <div class="card h-100 hover-scale-up cursor-pointer" onclick="redirectSites()">
                       <div class="card-body d-flex flex-column align-items-center">
                         <div class="sw-6 sh-6 rounded-xl d-flex justify-content-center align-items-center border border-primary mb-4">
                           <i data-acorn-icon="pin" class="text-primary"></i>
@@ -143,7 +142,7 @@
                   </div>
 
                   <div class="col-6 col-md-4 col-lg-2">
-                    <div class="card h-100 hover-scale-up cursor-pointer">
+                    <div class="card h-100 hover-scale-up cursor-pointer" onclick="redirectDevices()">
                       <div class="card-body d-flex flex-column align-items-center">
                         <div class="sw-6 sh-6 rounded-xl d-flex justify-content-center align-items-center border border-primary mb-4">
                           <i data-acorn-icon="router" class="text-primary"></i>
@@ -165,52 +164,8 @@
           </div>
           <!-- Stats End NETWORK-->
 
+          <!-- Sección Recent Orders completamente removida -->
 
-
-          <div class="row">
-            <!-- Recent Orders Start -->
-            <div class="col-xl-6 mb-5">
-              <h2 class="small-title">Recent Orders</h2>
-              <div class="mb-n2 scroll-out">
-                <div class="scroll-by-count" data-count="6">
-                  <div class="card mb-2 sh-15 sh-md-6">
-                    <div class="card-body pt-0 pb-0 h-100">
-                      <div class="row g-0 h-100 align-content-center">
-                        <div class="col-10 col-md-4 d-flex align-items-center mb-3 mb-md-0 h-md-100">
-                          <a href="Orders.Detail.html" class="body-link stretched-link">Order #54129</a>
-                        </div>
-                        <div class="col-2 col-md-3 d-flex align-items-center text-muted mb-1 mb-md-0 justify-content-end justify-content-md-start">
-                          <span class="badge bg-outline-primary me-1">PENDING</span>
-                        </div>
-                        <div class="col-12 col-md-2 d-flex align-items-center mb-1 mb-md-0 text-alternate">
-                          <span>
-                            <span class="text-small">$</span>
-                            17.35
-                          </span>
-                        </div>
-                        <div class="col-12 col-md-3 d-flex align-items-center justify-content-md-end mb-1 mb-md-0 text-alternate">Today - 13:20</div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  
-                  
-                  
-
-                  
-
-                  
-
-                  
-
-                  
-                </div>
-              </div>
-            </div>
-            <!-- Recent Orders End -->
-
-            
-          </div>
         </div>
       </main>
       
@@ -287,20 +242,24 @@
 
 
     <script>
+      // Funciones de redirección corregidas
+      function redirectToCustomers() {
+        window.location.href = 'Customers.php'; 
+      }
 
+      function redirectSites() {
+        window.location.href = 'Sites.php';
+      }
 
+      function redirectDevices() {
+        window.location.href = 'Devices.php'; 
+      }
 
-
-      $( document ).ready(function() {
-
-          ShowStats();
-
-         
-
-       });
-
-
-    </script>
+      // Inicialización cuando el documento esté listo
+      $(document).ready(function() {
+        ShowStats();
+      });
+     </script>
 
   </body>
-</html>
+  </html>
